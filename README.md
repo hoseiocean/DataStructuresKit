@@ -30,7 +30,10 @@ dependencies: [
 ]
 ```
 
-Or in Xcode: File → Add Package Dependencies → Enter the repository URL.
+Or in Xcode: File → Add Package Dependencies → Enter the repository URL:
+```
+```
+https://github.com/hoseiocean/DataStructuresKit.git
 
 ## Data Structures
 

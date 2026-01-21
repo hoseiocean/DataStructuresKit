@@ -30,7 +30,10 @@ dependencies: [
 ]
 ```
 
-Ou dans Xcode : Fichier → Ajouter des dépendances de package → Entrez l'URL du dépôt.
+Ou dans Xcode : Fichier → Ajouter des dépendances de package → Entrez l'URL du dépôt :
+```
+```
+https://github.com/hoseiocean/DataStructuresKit.git
 
 ## Structures de données
 
