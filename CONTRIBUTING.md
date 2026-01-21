@@ -80,10 +80,10 @@ Validate inputs early. Use `precondition` for programmer errors and throw errors
 
 ## Pull Request Process
 
-1. **Create an ADR (Architecture Decision Record)** for new data structures before implementation, covering:
-   - Copy semantics (value type with COW vs reference type)
-   - ABI stability considerations
-   - Performance characteristics and complexity guarantees
+1. **For new data structures**, follow the existing ADR guidelines in `/Documentation/ADR/`, ensuring your implementation addresses:
+   - Copy semantics (value type with COW vs reference type) — see ADR-001
+   - ABI stability considerations — see ADR-002
+   - Performance characteristics and complexity guarantees — see ADR-003
 
 2. **Ensure all tests pass** with `swift test`
 
