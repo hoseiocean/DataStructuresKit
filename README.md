@@ -322,7 +322,7 @@ All applicable types conform to:
 
 ## Contributing
 
-Contributions are welcome! Please read the ADR documents in `/Documentation/ADR/` before contributing to understand design decisions.
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) and the ADR documents in `/Documentation/ADR/` before contributing to understand our development process and design decisions.
 
 ## License
 

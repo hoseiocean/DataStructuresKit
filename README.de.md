@@ -322,7 +322,7 @@ Alle anwendbaren Typen konformieren zu:
 
 ## Mitwirken
 
-Beiträge sind willkommen! Bitte lesen Sie die ADR-Dokumente in `/Documentation/ADR/` vor dem Mitwirken, um die Designentscheidungen zu verstehen.
+Beiträge sind willkommen! Bitte lesen Sie unseren [Beitragsleitfaden](CONTRIBUTING.md) und die ADR-Dokumente in `/Documentation/ADR/` vor dem Mitwirken, um unseren Entwicklungsprozess und die Designentscheidungen zu verstehen.
 
 ## Lizenz
 

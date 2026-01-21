@@ -322,7 +322,7 @@ Todos los tipos aplicables se conforman a:
 
 ## Contribuir
 
-¡Las contribuciones son bienvenidas! Por favor lee los documentos ADR en `/Documentation/ADR/` antes de contribuir para entender las decisiones de diseño.
+¡Las contribuciones son bienvenidas! Por favor lee nuestra [Guía de contribución](CONTRIBUTING.md) y los documentos ADR en `/Documentation/ADR/` antes de contribuir para entender nuestro proceso de desarrollo y las decisiones de diseño.
 
 ## Licencia
 

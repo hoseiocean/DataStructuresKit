@@ -19,8 +19,9 @@ This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDU
 ## Getting Started
 
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/DataStructuresKit.git`
-3. Create a feature branch: `git checkout -b feature/your-feature-name`
+2. Clone your fork: `git clone https://github.com/hoseiocean/DataStructuresKit.git`
+3. Read the ADR documents in `/Documentation/ADR/` to understand existing design decisions
+4. Create a feature branch: `git checkout -b feature/your-feature-name`
 4. Make your changes
 5. Run tests: `swift test`
 6. Commit and push your changes

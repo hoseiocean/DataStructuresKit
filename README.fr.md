@@ -322,7 +322,7 @@ Tous les types applicables se conforment à :
 
 ## Contribuer
 
-Les contributions sont les bienvenues ! Veuillez lire les documents ADR dans `/Documentation/ADR/` avant de contribuer pour comprendre les décisions de conception.
+Les contributions sont les bienvenues ! Veuillez lire notre [Guide de contribution](CONTRIBUTING.md) et les documents ADR dans `/Documentation/ADR/` avant de contribuer pour comprendre notre processus de développement et les décisions de conception.
 
 ## Licence
 
