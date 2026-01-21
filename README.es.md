@@ -9,6 +9,8 @@
 
 Una colección completa y lista para producción de estructuras de datos para Swift, llenando los vacíos de la biblioteca estándar con implementaciones de alto rendimiento y bien documentadas.
 
+[![Documentación](https://img.shields.io/badge/DocC-Documentation-blue?logo=swift)](https://hoseiocean.github.io/DataStructuresKit/documentation/datastructureskit/)
+
 ## Características
 
 - 🚀 **Alto rendimiento**: Todas las operaciones cumplen o superan las garantías de complejidad documentadas
