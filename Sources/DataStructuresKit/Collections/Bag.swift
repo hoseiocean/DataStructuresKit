@@ -64,8 +64,8 @@
 /// ### Creating a Bag
 ///
 /// - ``init()``
-/// - ``init(_:)-6v9hk``
-/// - ``init(_:)-1ol5l``
+/// - ``init(_:)-81gxl``
+/// - ``init(_:)-820ce``
 ///
 /// ### Adding Elements
 ///
@@ -77,7 +77,7 @@
 /// - ``remove(_:)``
 /// - ``remove(_:count:)``
 /// - ``removeAll(_:)``
-/// - ``removeAll()``
+/// - ``removeAll(keepingCapacity:)``
 ///
 /// ### Querying
 ///
