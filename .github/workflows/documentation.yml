@@ -31,12 +31,13 @@ jobs:
         run: |
           swift package resolve
           swift build
+          mkdir -p docs
           swift package generate-documentation \
             --target DataStructuresKit \
             --disable-indexing \
             --transform-for-static-hosting \
             --hosting-base-path DataStructuresKit \
-            --output-path docs
+            --output-path ./docs
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
