@@ -11,6 +11,7 @@ xcuserdata/
 ## Build
 .build/
 DerivedData/
+Package.resolved
 
 ## macOS
 .DS_Store
