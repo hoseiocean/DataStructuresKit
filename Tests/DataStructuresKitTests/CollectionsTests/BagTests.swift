@@ -312,4 +312,60 @@ struct BagTests {
     #expect(bag.uniqueCount == 9)
     #expect(bag.totalCount == 12)
   }
+  
+  @Test("Dictionary literal with duplicate keys sums counts")
+  func testDictionaryLiteralDuplicateKeys() {
+      let bag: Bag<String> = ["a": 1, "a": 2, "b": 3]
+      
+      #expect(bag.count(of: "a") == 3)
+      #expect(bag.count(of: "b") == 3)
+      #expect(bag.uniqueCount == 2)
+      #expect(bag.totalCount == 6)
+  }
+}
+
+@Test("Dictionary literal basic usage")
+func testDictionaryLiteralBasic() {
+    let bag: Bag<String> = ["apple": 3, "banana": 2]
+    
+    #expect(bag.count(of: "apple") == 3)
+    #expect(bag.count(of: "banana") == 2)
+    #expect(bag.uniqueCount == 2)
+    #expect(bag.totalCount == 5)
+}
+
+@Test("Dictionary literal single element")
+func testDictionaryLiteralSingleElement() {
+    let bag: Bag<String> = ["only": 5]
+    
+    #expect(bag.count(of: "only") == 5)
+    #expect(bag.uniqueCount == 1)
+    #expect(bag.totalCount == 5)
+}
+
+@Test("Dictionary literal empty")
+func testDictionaryLiteralEmpty() {
+    let bag: Bag<String> = [:]
+    
+    #expect(bag.isEmpty)
+    #expect(bag.uniqueCount == 0)
+    #expect(bag.totalCount == 0)
+}
+
+@Test("Dictionary literal with count of 1")
+func testDictionaryLiteralCountOfOne() {
+    let bag: Bag<String> = ["a": 1, "b": 1, "c": 1]
+    
+    #expect(bag.count(of: "a") == 1)
+    #expect(bag.count(of: "b") == 1)
+    #expect(bag.count(of: "c") == 1)
+    #expect(bag.uniqueCount == 3)
+    #expect(bag.totalCount == 3)
+}
+
+@Test("Count validation rejects zero and negative")
+func testCountValidation() {
+    #expect(Bag<String>.validateCount(1) == true)
+    #expect(Bag<String>.validateCount(0) == false)
+    #expect(Bag<String>.validateCount(-5) == false)
 }

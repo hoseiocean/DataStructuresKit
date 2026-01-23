@@ -130,6 +130,14 @@ public struct Bag<Element: Hashable> {
     }
   }
   
+  // MARK: - Validation
+
+  /// Validates that a count is positive.
+  @usableFromInline
+  internal static func validateCount(_ count: Int) -> Bool {
+    count > 0
+  }
+  
   // MARK: - Initialization
   
   /// Creates an empty bag.
@@ -175,8 +183,9 @@ public struct Bag<Element: Hashable> {
   /// let bag = Bag(["apple": 3, "banana": 2])
   /// print(bag.totalCount) // 5
   /// ```
+  @inlinable
   public init(_ counts: [Element: Int]) {
-    precondition(counts.values.allSatisfy { $0 > 0 }, "All counts must be positive")
+    precondition(counts.values.allSatisfy(Self.validateCount), "All counts must be positive")
     let total = counts.values.reduce(0, +)
     self.storage = Storage(counts: counts, totalCount: total)
   }
@@ -315,7 +324,7 @@ public struct Bag<Element: Hashable> {
   /// ```
   @inlinable
   public mutating func insert(_ element: Element, count: Int) {
-    precondition(count > 0, "Count must be positive")
+    precondition(Self.validateCount(count), "Count must be positive")
     ensureUnique()
     storage.counts[element, default: 0] += count
     storage.totalCount += count
@@ -363,7 +372,7 @@ public struct Bag<Element: Hashable> {
   @inlinable
   @discardableResult
   public mutating func remove(_ element: Element, count: Int) -> Int {
-    precondition(count > 0, "Count must be positive")
+    precondition(Self.validateCount(count), "Count must be positive")
     guard let current = storage.counts[element] else { return 0 }
     
     ensureUnique()
@@ -546,7 +555,7 @@ extension Bag: ExpressibleByDictionaryLiteral {
     self.storage = Storage()
     for (element, count) in elements {
       precondition(count > 0, "All counts must be positive")
-      storage.counts[element] = count
+      storage.counts[element, default: 0] += count
       storage.totalCount += count
     }
   }
